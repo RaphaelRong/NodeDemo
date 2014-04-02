@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    a(href='/') back to index
+    h1 #{legend}
+    form(name="register" action="/addNewShowPiece", method="post")
+        fieldset
+            input(type="text" name="name" placeholder="input item name")
+            br
+            input(type="text" name="author" placeholder="input item author")
+            br
+            input(type="text" name="area" placeholder="input item area")
+            br
+            input(type="text" name="position" placeholder="input item position")
+            br
+            input(type="text" name="category" placeholder="input item caregory")
+            br
+            input(type="text" name="beaconMajor" placeholder="input item beaconMajor")
+            br
+            input(type="text" name="beaconMinor" placeholder="input item beaconMinor")
+            br
+            input(type="submit" value="add")

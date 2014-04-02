@@ -1,0 +1,15 @@
+//
+   Created by ronghao on 14-3-10.
+
+extends layout
+block content
+    a(href='/') back to index
+    h1 #{title}
+        ul
+        for data in datas
+            div #{data.name} #{data.beaconMinor} #{data.category} #{data._id}
+            form(name="delete" action="/deleteShowpiece", method="post")
+                input(type='hidden', value=data._id, name="identity" )
+                input(type="submit" value="删除")
+        else
+            li sorry, no books!
